@@ -2,12 +2,13 @@ import React from 'react';
 
 function Pagination(props) {
 	const range = [];
+	const limitPages = 20;
 	for (let i = 1; i <= props.pageCount; i++) range.push(i);
 
 	return (
 		<div className="columns">
 			<div className="column col-12">
-				{props.pageCount ?
+				{props.pageCount < limitPages ?
 					<ul className="pagination">
 						<li className="page-item disabled">
 							<button

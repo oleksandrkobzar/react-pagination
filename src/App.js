@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import Data from './generated.json';
 import Pagination from './Pagination';
+import CustomPagination from './CustomPagination';
 
 function App() {
-  const [countPerPage, setCountPerPage] = useState(10);
+  const [countPerPage, setCountPerPage] = useState(5);
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
 
-  const range = [5, 10, 15, 20, 25, 30, 40, 50];
+  const range = [2, 3, 5, 7, 10, 15, 20, 25, 30, 40, 50];
   const pageCount = Math.ceil(Data.length / countPerPage);
 
   useEffect(() => {
@@ -54,7 +55,7 @@ function App() {
           </header>
         </div>
       </div>
-      <Pagination pageCount={pageCount} page={page} setPage={setPage} />
+      <CustomPagination pageCount={pageCount} page={page} setPage={setPage} />
       <div className="columns">
         <div className="column col-12">
           {data.length ?
