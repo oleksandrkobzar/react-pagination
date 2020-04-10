@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Pagination(props) {
+function DefaultPagination(props) {
 	const range = [];
 	const limitPages = 20;
 	for (let i = 1; i <= props.pageCount; i++) range.push(i);
@@ -43,4 +43,4 @@ function Pagination(props) {
 	);
 }
 
-export default Pagination;
+export default DefaultPagination;

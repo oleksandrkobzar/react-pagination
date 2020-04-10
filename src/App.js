@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Data from './generated.json';
-import Pagination from './Pagination';
+import DefaultPagination from './DefaultPagination';
 import CustomPagination from './CustomPagination';
 
 function App() {
@@ -86,7 +86,7 @@ function App() {
           }
         </div>
       </div>
-      <Pagination pageCount={pageCount} page={page} setPage={setPage} />
+      <DefaultPagination pageCount={pageCount} page={page} setPage={setPage} />
     </div>
   );
 }
